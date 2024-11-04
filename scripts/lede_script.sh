@@ -23,7 +23,7 @@ git_sparse_clone master https://github.com/immortalwrt/luci applications/luci-ap
 sed -i 's?../../luci.mk?$(TOPDIR)/feeds/luci/luci.mk?g' package/luci-app-udp2raw/Makefile
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.50.10/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.123.21/g' package/base-files/files/bin/config_generate
 
 chmod +x $GITHUB_WORKSPACE/scripts/*
 $GITHUB_WORKSPACE/scripts/openclash_core.sh

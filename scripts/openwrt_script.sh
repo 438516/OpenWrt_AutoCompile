@@ -77,13 +77,13 @@ git_sparse_clone master https://github.com/immortalwrt/luci applications/luci-ap
 sed -i 's?../../luci.mk?$(TOPDIR)/feeds/luci/luci.mk?g' package/luci-app-udp2raw/Makefile
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.50.3/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.123.21g' package/base-files/files/bin/config_generate
 
 # Modify default theme
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Modify hostname
-#sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/N4505/g' package/base-files/files/bin/config_generate
 
 # 修改时区为CST-8,Asia/Shanghai
 sed -i "315s/UTC'/CST-8'\\n\\t\\tset system.@system\[-1\].zonename=\'Asia\/Shanghai\'/" package/base-files/files/bin/config_generate
